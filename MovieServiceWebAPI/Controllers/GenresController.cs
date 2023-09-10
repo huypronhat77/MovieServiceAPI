@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieServiceWebAPI.Model;
 using MovieServiceWebAPI.Services;
+using Serilog;
 
 namespace MovieServiceWebAPI.Controllers
 {
@@ -44,6 +45,7 @@ namespace MovieServiceWebAPI.Controllers
             }
             catch (Exception e)
             {
+                Log.Error($"Creat Genre Failed {e.Message}, statck trace: {e.StackTrace}");
                 return BadRequest($"Fail to add new Genre with error {e.Message}, statck trace: {e.StackTrace}");
             }
         }
@@ -66,6 +68,7 @@ namespace MovieServiceWebAPI.Controllers
             }
             catch (Exception e)
             {
+                Log.Error($"Update Genre Error {e.Message}, statck trace: {e.StackTrace}");
                 return BadRequest($"Fail to update new Genre with error {e.Message}, statck trace: {e.StackTrace}");
             }
         }
@@ -86,6 +89,7 @@ namespace MovieServiceWebAPI.Controllers
             }
             catch (Exception e)
             {
+                Log.Error($"Delete Genre Error {e.Message}, statck trace: {e.StackTrace}");
                 return BadRequest($"Fail to delete new Genre with error {e.Message}, statck trace: {e.StackTrace}");
             }
         }
