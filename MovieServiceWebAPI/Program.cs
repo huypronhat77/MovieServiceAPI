@@ -24,7 +24,10 @@ try
 
     // Add services to the container.
     builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+    builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+
     builder.Services.AddControllers();
+
     builder.Services.AddDbContext<MyDBContext>(options => {
         options.UseSqlServer(builder.Configuration.GetConnectionString("connectionString"));
     });
