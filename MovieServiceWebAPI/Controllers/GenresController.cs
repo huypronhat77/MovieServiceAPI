@@ -45,7 +45,7 @@ namespace MovieServiceWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Log.Error($"Creat Genre Failed {e.Message}, statck trace: {e.StackTrace}");
+                Log.Error($"Create Genre Failed {e.Message}, statck trace: {e.StackTrace}");
                 return BadRequest($"Fail to add new Genre with error {e.Message}, statck trace: {e.StackTrace}");
             }
         }

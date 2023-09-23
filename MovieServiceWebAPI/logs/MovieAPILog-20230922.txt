@@ -1,0 +1,21 @@
+2023-09-22 20:52:08.266 +07:00 [INF] Starting Movie Web API
+2023-09-22 21:01:57.887 +07:00 [INF] Starting Movie Web API
+2023-09-22 21:16:55.983 +07:00 [INF] Starting Movie Web API
+2023-09-22 21:22:48.941 +07:00 [INF] Starting Movie Web API
+2023-09-22 21:29:52.012 +07:00 [INF] Starting Movie Web API
+2023-09-22 21:31:56.130 +07:00 [ERR] Update Movie Error The instance of entity type 'MovieGenre' cannot be tracked because another instance with the same key value for {'MovieId', 'GenreId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values., statck trace:    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at MovieServiceWebAPI.Services.MovieRepository.Update(String id, MovieVM entity, Boolean& isSuccess) in G:\New folder\Repository\MovieServiceWebAPI\MovieServiceWebAPI\Services\MovieRepository.cs:line 147
+   at MovieServiceWebAPI.Controllers.MoviesController.PutMovie(String id, MovieVM movieVM) in G:\New folder\Repository\MovieServiceWebAPI\MovieServiceWebAPI\Controllers\MoviesController.cs:line 59
+2023-09-22 21:51:33.999 +07:00 [INF] Starting Movie Web API
+2023-09-22 21:55:47.150 +07:00 [INF] Starting Movie Web API
+2023-09-22 22:27:02.187 +07:00 [INF] Starting Movie Web API
+2023-09-22 22:34:48.420 +07:00 [INF] Starting Movie Web API
